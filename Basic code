@@ -1,0 +1,59 @@
+from datetime import date
+from datetime import datetime
+from time import time
+
+def speak(str):
+    from win32com.client import Dispatch
+    speak = Dispatch("SAPI.SpVoice")
+    speak.Speak(str)
+
+if __name__ == '__main__':
+    print("************HeAlth aLarm***********")
+    
+    
+    print("Welcome to the Office")
+    speak("Welcome to the Office")
+    today = date.today()
+    tme = datetime.now().time()
+    print("Date: ",today)
+    print("Time: ",tme)
+    speak(f"Today's date is {today} and time is {tme}.. Lets begin")
+    #taking the initial time
+    init_water = time()
+    init_exercise= time()
+    init_eyes = time()
+    watersecs = 40*60      #in seconds
+    exercisesecs = 30*60   #in seconds
+    eyessecs = 45*60       #in seconds
+    while (9:00:00<tme<17:00:00):
+        if time() - init_water > watersecs:
+            speak("Water Drinking time. Enter 'zero' to stop the alarm.")
+            inp = input("Enter code ")
+            if inp == 0:
+                break
+            #printing the real time water has dranked
+            print("Water drank at: ",datetime.now().time())
+            init_water = time()
+            
+            
+
+        if time() - init_eyes >eyessecs:
+            speak("Eye exercise time. Enter 'zero' to stop the alarm.")
+            inp = input("Enter code ")
+            if inp == 0:
+                break
+        
+            print("Eye exercise done at: ",datetime.now().time())
+            init_eyes = time()
+            
+            
+               
+
+        if time() - init_exercise > exercisesecs:
+            speak("Physical Activity Time. Enter 'zero' to stop the alarm.")
+            inp = input("Enter code ")
+            if inp == 0:
+                break
+            print("Physical exercise done at: ",datetime.now().time())
+            init_exercise = time()
+            
