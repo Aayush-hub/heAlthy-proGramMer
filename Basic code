@@ -25,7 +25,7 @@ if __name__ == '__main__':
     watersecs = 40*60      #in seconds
     exercisesecs = 30*60   #in seconds
     eyessecs = 45*60       #in seconds
-    while (9:00:00<tme<17:00:00):
+    while True:
         if time() - init_water > watersecs:
             speak("Water Drinking time. Enter 'zero' to stop the alarm.")
             inp = input("Enter code ")
