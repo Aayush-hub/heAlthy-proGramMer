@@ -11,7 +11,7 @@ def speak(str):
 if __name__ == '__main__':
     print("************HeAlth aLarm***********")
     
-    
+    print("hello world")
     print("Welcome to the Office")
     speak("Welcome to the Office")
     today = date.today()
