@@ -1,1 +1,1 @@
-# heAlthy-proGramMer
+# heAlthy-programmer
