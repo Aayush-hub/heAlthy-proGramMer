@@ -2,8 +2,6 @@ name: Labeling new issue
 on:
   issues:
     types: ['opened']
-  pull_request:
-    types: ['opened']
 jobs:
   build:
     runs-on: ubuntu-latest
