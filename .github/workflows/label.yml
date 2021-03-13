@@ -1,9 +1,9 @@
 name: Labeling new issue
 on:
   issues:
-    types: ['opened']
+    types: [opened]
   pull_request:
-    types: ['opened']
+    types: [opened]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,6 +12,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           ignore-comments: true
-          labels-synonyms: '{"bug":["error","need fix","not working"],"enhancement":["upgrade"],"question":["help"]}'
-          labels-not-allowed: '["good first issue"]'
-          default-labels: '["GSSOC"]'
+          labels-synonyms: '{"gssoc21":["GSSOC","GSSOC21","gssoc","Gssoc","GSSoC"]}'
