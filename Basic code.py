@@ -2,7 +2,7 @@ from datetime import date               #built-in module
 from datetime import datetime           #built-in module
 from time import time                   #built-in module
 from plyer import notification          #pip install plyer
-
+print("Hello world")
 def speak(str):
     from win32com.client import Dispatch   #pip install pywin32
     speak = Dispatch("SAPI.SpVoice")
